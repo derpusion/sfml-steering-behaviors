@@ -47,5 +47,5 @@ part4: $(obj_dir)/steering.o $(obj_dir)/boid.o $(obj_dir)/wander.o $(obj_dir)/fl
 	$(UBUNTU_COMPILER) -std=c++17 -o $@ $^ $(LDFLAGS) $(UBUNTU_LIB)
 
 clean:
-	find $(obj_dir) -type f -delete
+	find $(obj_dir) -type f ! -name 'README.md' -delete
 	rm -f part1 part2 part3 part4
